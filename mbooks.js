@@ -1,6 +1,6 @@
-const mongoVersion = parseInt(process.env.MONGO_VERSION || "4.4.6")
+const mongoVersion = parseInt(process.env.MONGO_VERSION || "2")
 
-if(mongoVersion != 4.4.6) process.exit(0)
+if(mongoVersion != 1) process.exit(0)
 
 const MAX_GAMES = parseInt(process.env.MAX_GAMES || "250")
 
