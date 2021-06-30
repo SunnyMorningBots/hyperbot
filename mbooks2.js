@@ -29,7 +29,7 @@ const variantName2variantKey = {
 	"Antichess" : "antichess"
 }
 
-const mongoVersion = parseInt(process.env.MONGO_VERSION || "1")
+const mongoVersion = parseInt(process.env.MONGO_VERSION || "4.4.6")
 
 if(mongoVersion != 2) process.exit(0)
 
@@ -104,7 +104,8 @@ async function processPgn(pgn, resolve){
 	let tags = result.tags
 	
 	if(tags.variant){
-		let variantKey = variantName2variantKey[tags.variant]
+		let variantKey = variantName
+		variantKey[tags.variant]
 		
 		if(!variantKey){
 			logFunc(`unknown variant ${tags.variant}`)
