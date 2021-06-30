@@ -29,9 +29,9 @@ const variantName2variantKey = {
 	"Antichess" : "antichess"
 }
 
-const mongoVersion = parseInt(process.env.MONGO_VERSION || "4.4.6")
+const mongoVersion = parseInt(process.env.MONGO_VERSION || "1")
 
-if(mongoVersion != 2) process.exit(0)
+if(mongoVersion != 1) process.exit(0)
 
 const fetch = require('node-fetch')
 
